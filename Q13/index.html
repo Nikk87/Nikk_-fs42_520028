@@ -1,0 +1,25 @@
+<script>
+    let scores = [35, 92, 45, 88, 37, 91, 50, 39, 70, 95];
+    function manageScores(scores) {
+      let passedCount = 0;
+    
+      let adjustedScores = scores.map(score => {
+        if (score < 40) {
+          score += 20;
+        }
+        if (score > 90) {
+          score = 90;
+        }
+        if (score >= 50) {
+          passedCount++;
+        }
+        return score;
+      });
+    
+      console.log("Final adjusted scores:", adjustedScores);
+      console.log("Number of students passed:", passedCount);
+    }
+    
+    manageScores(scores);
+    
+    </script>
